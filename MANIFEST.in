@@ -1,0 +1,6 @@
+recursive-include flask_redoc/templates *
+recursive-include flask_redoc/static/js *
+
+recursive-include tests *.py
+recursive-include tests *.yml
+
