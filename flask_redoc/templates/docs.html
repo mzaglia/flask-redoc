@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <!-- needed for adaptive design -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
+
+    <!--
+    ReDoc doesn't change outer page styles
+    -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="redoc"></redoc>
+    {% if use_cdn %}
+    <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"> </script>
+    {% else %}
+    <script src="{{url_for(endpoint+'.static', filename='js/redoc.standalone.js')}}"> </script>
+    {% endif %}
+
+    <script>
+        Redoc.init({{ spec_file | tojson }}, {
+            hideDownloadButton: true,
+            hideLoading: true
+        }, document.getElementById('redoc'))
+     </script>
+  </body>
+</html>
