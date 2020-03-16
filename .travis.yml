@@ -2,15 +2,20 @@ language: python
 dist: bionic
 python:
     - "3.7"
+    
 install:
     - pip install -U pip
     - pip install .[tests,docs]
+    - pip install bump2version
 
 script:
     - pydocstyle flask_redoc
     - isort --check-only --diff --recursive flask_redoc/*.pydocstyle
     - check-manifest --ignore ".travis-*" --ignore ".readthedocs.*"
     - pytest
+
+after_sucess:
+    - coveralls
 
 before_deploy:
     - git config --local user.name "Matheus C. Zaglia"
