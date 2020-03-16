@@ -34,7 +34,7 @@ release = flask_redoc.__version__
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinx.ext.intersphinx'
+    'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
 ]
 
