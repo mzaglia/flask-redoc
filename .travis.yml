@@ -30,12 +30,10 @@ deploy:
       password:
         secure: "ggX1+2Jz5JnO+f6lXuAy4iemN4QJV9I4Qed/Uw6Wh3uUkRhN7ZQKY77tj0rAUBYIBUPxpJNTgiBupTGxYQ8HiOVxs7l9Y9Re2ZQZXbnTD4uecdjz7U+0PE89UjZR0CzrSaQqcOxVD/TywR86hbMVKDfQxpWzPGkR/fT0He/jA4hpxwx4xBWLwWUmJ0I+mU8vqzC4OxUFNKeklnlTKevp6KQFLeATIiup/PiIFBho5NqoNEbuxmKX5v8drkn6hC1fmZZvdmsJlscAq82Pt/qlH+mwrDAhHKoYrJkaXyMCuPEkR9lonJowqD8JvXN2VMlsBg7nqi376K7pTehO45xsimG5wD4ICwHaHg5nL+0YDlceXBzs4mC1/Kl4bYJmBD8rPK05+Flx3oF77vVOcxegeiB5tl9V9z/ghGx6GilpI8RDgomkn+GhZko0s5kjmulttY3Cj2Hrj/AMsv4cbsEfT6kHc9V7gJQuiEkFVr1hHPrUW1NcXQppUBME04zMe+BfyXRdAKbyVKLZK/78JZv5vvBdR34Vc0zu6lWMU/PF9lkcW69l0NquMlATqQVIbBYxepS7aY+zG6Ocv/BnbHzCvrGUXo5x+rfH0fxiKv0sQn+ji6KDR3UlFuZNTdqoRAAKzMuOBPtxrUVH51+0DfCnpQMN0IPAh1ZMYUyGatmzB+U="
       on:
-        tags: true
         branch: master
     - provider: releases
       api_key:
           secure: "uLJiD1vXEz+1ch5Zsu50Boml6nI3wjgN3wbLNBD2QgCO5O1UJTQlT/7sGfcb2zp+Z3w0ebh8h61m8FJ/D/unInmFtzl67x43b7eIzocvJpRV5KPI2Lru5PYz/2z+h6Jsdir2/uoX2WoRryaZLF9/CWtWXJ8NHW4gpexRqaq+CaNseksKhlkaLzjtv5Asn+uA2Kl1c9ED30oWUV/wGK7eSqPYtXoMOxT/sd5f+zaZULAe32jBr4nBXUwy9bkUxBtclH4Mb6Wl1l3/EdMRIvjdztCR2DpKBXH4qktxS/1qRHQM3wSxiE99FPkj5amBQl9LW8/oGHVA1WFaSHaM2E471U7zupf4vE3h4VSEO8fYHFNN9WUWhnKV7bJY35v0/wNuGpUOOu55+kb9BdycddvnnmKZJ97tRBiPoeQKPmZSMziIqipikIR9ml8u7junqArDlI51OxxkqbTdbCT8LwPGWDycdEmZnuPh6gho2ERn2dYrwIb6HbxxZdN0h2U8SgBDjU8GdGy7nCJGiNeskTkJW8VI1eFlVATLsEI7lrfUTQ/YYvubLUJLFSCI865K930QGW33yOATGAIK8/seeuGICkP+TFf3s8g6wIkex8SOG8PB9a5iBxv0COPn4Cv3ub6KcJNgwaQ9E2POHmoZD4kMFJ/8Pc9ROCN8BaISlMds0SY="
       skip_cleanup: true
       on:
-        tags: true
         branch: master
