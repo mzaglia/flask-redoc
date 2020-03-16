@@ -9,7 +9,7 @@ from .version import __version__
 
 
 class Redoc(object):
-    """Redoc Object"""
+    """Redoc Object."""
 
     DEFAULT_CONFIG = {
         'endpoint': 'docs',
@@ -20,7 +20,7 @@ class Redoc(object):
     }
 
     def __init__(self, spec_file, app=None, config=None):
-        """[summary]
+        """Init the Redoc object.
 
         :param spec_file: spec file path
         :param app: Flask app
@@ -34,7 +34,7 @@ class Redoc(object):
             self.init_app(app)
 
     def init_app(self, app):
-        """Initialize the Redoc
+        """Initialize the Redoc.
 
         :param app: Flask app
         """
@@ -57,7 +57,7 @@ class Redoc(object):
         self.app.register_blueprint(bp)
 
     def docs_view(self):
-        """Renders the docs.html template."""
+        """Render the docs.html template."""
         return render_template('docs.html',
                                spec_file=self.load_spec_file(self.spec_file),
                                endpoint=self.config.get('endpoint', 'redoc'),
