@@ -11,7 +11,6 @@ script:
     - isort --check-only --diff --recursive flask_redoc/*.pydocstyle
     - check-manifest --ignore ".travis-*" --ignore ".readthedocs.*"
     - pytest
-    - sphinx-build -qnW --color -b doctest docs/source docs/build/doctest
 
 before_deploy:
     - git config --local user.name "Matheus C. Zaglia"
