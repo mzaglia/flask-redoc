@@ -45,6 +45,7 @@ setup(
     author_email='mzaglia@gmail.com',
     description=__doc__,
     long_description=readme,
+    long_description_content_type='text/markdown',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
