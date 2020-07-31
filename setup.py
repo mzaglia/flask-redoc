@@ -54,7 +54,11 @@ setup(
     setup_requires=setup_requires,
     tests_require=tests_require,
     install_requires=['Flask>=1.1.1',
-                      'PyYAML>=5.3'],
+                      'PyYAML>=5.3',
+                      'apispec>=3.3.1',
+                      'apispec-webframeworks>=0.5.2'
+                      'jsonmerge>=1.7.0',
+                      'marshmallow>=3.6.1'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
