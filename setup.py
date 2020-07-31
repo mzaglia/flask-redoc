@@ -56,7 +56,7 @@ setup(
     install_requires=['Flask>=1.1.1',
                       'PyYAML>=5.3',
                       'apispec>=3.3.1',
-                      'apispec-webframeworks>=0.5.2'
+                      'apispec-webframeworks>=0.5.2',
                       'jsonmerge>=1.7.0',
                       'marshmallow>=3.6.1'],
     classifiers=[
