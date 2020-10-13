@@ -46,7 +46,7 @@ setup(
     description=__doc__,
     long_description=readme,
     long_description_content_type='text/markdown',
-    packages=find_packages(),
+    packages=list(filter(lambda pkg: 'tests' not in pkg, find_packages())),
     include_package_data=True,
     zip_safe=False,
     platforms='any',
