@@ -53,7 +53,7 @@ setup(
     extras_require=extras_require,
     setup_requires=setup_requires,
     tests_require=tests_require,
-    install_requires=['Flask>=1.1.1',
+    install_requires=['Flask>=2.3.2',
                       'PyYAML>=5.3',
                       'apispec>=3.3.1',
                       'apispec-webframeworks>=0.5.2',
