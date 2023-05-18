@@ -40,6 +40,7 @@ class Redoc(object):
         self.spec_file = spec_file
         self.config = config or self.DEFAULT_CONFIG.copy()
         self.spec = None
+        self._is_first_request = True
 
         if app is not None:
             self.init_app(app)
@@ -69,7 +70,7 @@ class Redoc(object):
                             info=self.config['info'],
                             plugins=self.config['plugins'])
 
-        self.app.before_first_request(self.docstrings_to_openapi)
+        self.app.before_request(self.docstrings_to_openapi)
 
 
         bp = Blueprint(self.config.get('endpoint', 'redoc'),
@@ -120,6 +121,8 @@ class Redoc(object):
     def docstrings_to_openapi(self):
         """Transform Flask docstring documentation to openapi spec.
         """
+        if not self._is_first_request:
+            return
 
         for schema in self.config['marshmallow_schemas']:
             self.spec.components.schema(schema.__name__, schema=schema)
@@ -130,6 +133,7 @@ class Redoc(object):
 
 
         self.spec_file = strip_empties_from_dict(merge(self.spec_file, self.spec.to_dict()))
+        self._is_first_request = False
 
 
 def strip_empties_from_list(data):
